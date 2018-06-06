@@ -1,0 +1,26 @@
+11/05/2018
+
+Realiza un script cgi en Perl que obtenga datos del cliente web:
+ - nombre/version del software agente
+ - dirección IP
+El script graba en un fichero /tmp/accesos
+ ambos datos obtenidos de la petición
+ más 
+ el método HTTP usado en la petición.
+ más
+ datos enviados en la petición (enviados mediante GET o POST), 
+ teniendo en cuenta que pude el cliente no enviar datos.
+
+El format del fichero debería ser:
+agente-usuario:IP:metodoHTTP:campo=valor;campo=valor;campo=valor...
+
+ejemplo de dos registros que se corresponden con dos peticiones
+
+curl/7.35.0:127.0.0.1:GET:
+curl/7.35.0:127.0.0.1:POST:nombre=pedro;edad=21
+
+En la primer petición no hubo datos enviados por el cliente web.
+
+El script devuelve como respuesta a la petición un texto HTML indicando
+que la petición ha sido contabilizada.
+
